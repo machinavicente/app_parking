@@ -1,0 +1,15 @@
+body{
+	display: flex;
+}
+section{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 30px;
+	width: 85vw;
+	height: 100vh;
+}
+
+
+
+
