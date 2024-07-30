@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,7 +7,6 @@
 	<link rel="shortcut icon" href="./favicon.ico">
 	<title>Sistema de control - Login</title>
 </head>
-
 <body style="height: 100vh;">
 	<section class="vh-100 bg-image">
 		<div class="mask d-flex align-items-center h-100 gradient-custom-3">
@@ -41,5 +39,4 @@
 		</div>
 	</section>
 </body>
-
 </html>

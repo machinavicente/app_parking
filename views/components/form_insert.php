@@ -22,53 +22,49 @@ if (!isset($_SESSION['Admin_user'])) {
 <body>
 	<?php include "aside.php"; ?>
 	<script src="./../.././assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="./../.././assets/bootstrap/js/checkout.js"></script>
 	<section class="overflow-auto">
-		<div class="container py-5 h-100">
-			<div class="row d-flex justify-content-center align-items-center">
-				<div class="col-xl-10">
-					<div class="card rounded-3 text-black">
-						<div class="row g-0">
-							<div class="col-lg-6">
-								<div class="card-body p-md-5 mx-md-4">
-									<form id="miFormulario" action="./../../controller/conexion.php" method="POST">
-										<div data-mdb-input-init class="form-outline mb-2">
-											<label class="form-label" for="nombre">Nombres</label>
-											<input type="text" id="nombre" name="nombre" class="form-control" placeholder="Vicente Jose" pattern="[A-Za-z\s]+" title="Solo se permiten letras y espacios" maxlength="20" required />
-										</div>
-										<div data-mdb-input-init class="form-outline mb-2">
-											<label class="form-label" for="apellido">Apellidos</label>
-											<input type="text" id="apellido" name="apellido" class="form-control" placeholder="Machina Rebolledo" pattern="[A-Za-z\s]+" title="Solo se permiten letras y espacios" maxlength="20" required />
-										</div>
-										<div data-mdb-input-init class="form-outline mb-2">
-											<label class="form-label" for="vehiculo">Tipo de Vehiculo</label>
-											<input type="text" id="vehiculo" name="vehiculo" class="form-control" placeholder="Tipo de vehiculo" pattern="[A-Za-z\s]+" title="Solo se permiten letras" maxlength="20" required />
-										</div>
-										<div data-mdb-input-init class="form-outline mb-2">
-											<label class="form-label" for="numeromatricula">Numero de Matricula</label>
-											<input type="text" id="numeromatricula" name="matricula" class="form-control" placeholder="Número de parking" pattern="[A-Za-z0-9_-]+" title="Solo se permiten letras, números, guiones altos y bajos" maxlength="20" required />
-										</div>
-										<div data-mdb-input-init class="form-outline mb-2">
-											<label class="form-label" for="numeroParking">Numero del Parking</label>
-											<input type="text" id="numeroParking" name="cod_espacio" class="form-control" placeholder="Número de parking" pattern="[A-Za-z0-9_-]+" title="Solo se permiten letras, números, guiones altos y bajos" maxlength="20" required />
-										</div>
-										<div data-mdb-input-init class="form-outline mb-2">
-											<label class="form-label" for="pisoParking">Piso del Parking</label>
-											<input type="text" id="pisoParking" name="piso" class="form-control" placeholder="Piso del parking" pattern="[A-Za-z0-9_-]+" title="Solo se permiten letras, números, guiones altos y bajos" maxlength="20" required />
-										</div>
-										<div class="text-center pt-1 mb-3 pb-1">
-											<button data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="submit">Enviar</button>
-										</div>
-									</form>
-								</div>
-							</div>
-							<div class="col-lg-6 d-flex align-items-center gradient-custom-2">
-								<div class="text-black lead">
-									<p class="small mb-0">El formulario proporcionado permite a los usuarios ingresar sus nombres, apellidos, número del parking y piso del parking. Cada campo del formulario tiene validaciones específicas para asegurar que los datos ingresados sean correctos. Los nombres y apellidos solo pueden contener letras y espacios, mientras que el número del parking y el piso del parking pueden incluir letras, números, guiones altos y bajos. Además, cada campo está limitado a un máximo de 20 caracteres. Para utilizar el formulario, complete todos los campos según las instrucciones y presione el botón "Enviar". Si alguna entrada no cumple con las validaciones, se mostrará una alerta indicando el error específico.</p>
-								</div>
+		<div class="container py-2 h-100">
+			<div class="py-5 text-center">
+				<h2>Registro de Vehiculos</h2>
+				<br>
+				<p class="lead">El formulario permite ingresar nombres, apellidos, número y piso del parking, con validaciones específicas: nombres y apellidos solo aceptan letras y espacios; número y piso del parking aceptan letras, números, guiones altos y bajos, con un límite de 20 caracteres. Al completar y enviar el formulario, se valida y muestra una alerta si hay errores.</p>
+			</div>
+			<div class="row g-3">
+				<h4 class="mb-3">Datos</h4>
+				<form class="needs-validation" id="miFormulario" action="./../../controller/conexion.php" method="POST">
+					<div class="row g-3">
+						<div class="col-sm-6">
+							<label for="firstName" class="form-label">Nombres</label>
+							<input type="text" name="nombre" class="form-control" placeholder="Vicente Jose" pattern="[A-Za-z\s]+" title="Por favor, ingrese los datos correctamente, utilizando solo letras y espacios, sin exceder los 20 caracteres." maxlength="20" required />
+						</div>
+						<div class="col-sm-6">
+							<label for="lastName" class="form-label">Apellidos</label>
+							<input type="text" name="apellido" class="form-control" placeholder="Machina Rebolledo" pattern="[A-Za-z\s]+" title="Por favor, ingrese los datos correctamente, utilizando solo letras y espacios, sin exceder los 20 caracteres." maxlength="20" required />
+							<div class="invalid-feedback">
+
 							</div>
 						</div>
+						<div class="col-md-4">
+							<label for="vehiculo" class="form-label">Tipo de Vehiculo</label>
+							<input type="text" id="vehiculo" name="vehiculo" class="form-control" placeholder="Tipo de vehiculo" pattern="[A-Za-z\s]+" title="Solo se permiten letras" required />
+						</div>
+						<div class="col-md-4">
+							<label for="numeromatricula" class="form-label">Matricula del Vehiculo</label>
+							<input type="text" id="numeromatricula" name="matricula" class="form-control" placeholder="Número de matricula" pattern="[A-Za-z0-9_-]+" title="Solo se permiten letras, números, guiones altos y bajos" maxlength="20" required />
+						</div>
+						<div class="col-md-4">
+							<label for="zip" class="form-label">Numero de plaza</label>
+							<input type="text" id="numeroParking" name="cod_espacio" class="form-control" placeholder="Codigo de parking" pattern="[A-Za-z0-9_-]+" title="Solo se permiten letras, números, guiones altos y bajos" maxlength="20" required />
+						</div>
+						<div class="col-12">
+							<label for="address" class="form-label">Piso de plaza</label>
+							<input type="text" cid="pisoParking" name="piso" class="form-control" placeholder="Piso del parking" pattern="[A-Za-z0-9_-]+" title="Solo se permiten letras, números, guiones altos y bajos" maxlength="20" required />
+						</div>
 					</div>
-				</div>
+					<hr class="my-4">
+					<button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-5" type="submit">Enviar</button>
+				</form>
 			</div>
 		</div>
 
