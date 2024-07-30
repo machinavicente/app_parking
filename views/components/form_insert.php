@@ -22,7 +22,7 @@ if (!isset($_SESSION['Admin_user'])) {
 <body>
 	<?php include "aside.php"; ?>
 	<script src="./../.././assets/bootstrap/js/bootstrap.bundle.min.js"></script>
-	<script src="./../.././assets/bootstrap/js/checkout.js"></script>
+	
 	<section class="overflow-auto">
 		<div class="container py-2 h-100">
 			<div class="py-5 text-center">
