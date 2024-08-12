@@ -22,6 +22,7 @@ if (!isset($_SESSION['Admin_user'])) {
 		<div class="section-main w-100 d-flex overflow-auto flex-wrap justify-content-center gap-3">
 			<div class="album py-5 bg-body-tertiary">
 				<div class="container">
+					<?php include "search_bar.html"; ?>
 					<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
 						<?php
 						$inc = include("./../../controller/show.php");
@@ -47,7 +48,7 @@ if (!isset($_SESSION['Admin_user'])) {
 													<?php echo $apellido ?> en el piso N° <?php echo $piso ?>.</p>
 												<div class="d-flex justify-content-between align-items-center">
 													<div class="btn-group">
-														<button type="button" class="btn btn-sm btn-outline-danger"><?php echo "<a class='link-dark link-underline-opacity-0' href='./../../controller/eliminar.php?id=" . $row['id'] . "'>Eliminar</a>"; ?></button>
+														<button type="button" class="btn btn-sm btn-outline-danger" onclick="return confirm('Estas Seguro que quieres eliminar este Contrato?')"><?php echo "<a class='link-dark link-underline-opacity-0' href='./../../controller/eliminar.php?id=" . $row['id'] . "'>Eliminar</a>"; ?></button>
 													</div>
 													<h4 class="text-body-secondary"><?php echo $codigo_parking ?></h4>
 												</div>

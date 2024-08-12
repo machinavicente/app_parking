@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="./assets/bootstrap/css/bootstrap.min.css">
 	<link rel="shortcut icon" href="./favicon.ico">
-	<title>Sistema de control - Login</title>
+	<title>EstacionaRapido - Login</title>
 </head>
 <body style="height: 100vh;">
 	<section class="vh-100 bg-image">
