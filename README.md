@@ -1,6 +1,6 @@
 # Información sobre los Desarrolladores
 
-Este proyecto ha sido desarrollado por un equipo dedicado de profesionales. A continuación, se proporciona información sobre los desarrolladores principales:
+Este proyecto ha sido desarrollado por un equipo dedicado de profesionales. A continuación, se proporciona información sobre el desarrollador:
 
 ## Desarrollador
 
