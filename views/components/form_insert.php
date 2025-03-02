@@ -14,6 +14,7 @@ if (!isset($_SESSION['Admin_user'])) {
 	<meta charset="utf-8">
 	<title>Insertar</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="./../../favicon.ico">
 	<link rel="stylesheet" type="text/css" href="./../../assets/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="./../../assets/styles/section.css">
 	<link rel="shortcut icon" href="./favicon.ico">
